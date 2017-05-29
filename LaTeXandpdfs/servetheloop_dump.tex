@@ -1,0 +1,198 @@
+% file: servetheloop_dump_grande.tex
+% rLoop notes "dump" 
+% 
+% github        : ernestyalumni
+% linkedin      : ernestyalumni 
+%
+% This code is open-source, governed by the Creative Common license.  Use of this code is governed by the Caltech Honor Code: ``No member of the Caltech community shall take unfair advantage of any other member of the Caltech community.'' 
+% 
+\documentclass[10pt]{amsart}
+\pdfoutput=1
+\usepackage{mathtools,amssymb,lipsum,caption}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[table]{xcolor}
+\usepackage{pdfpages}
+%\usepackage[version=3]{mhchem}
+\usepackage{mhchem}
+
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+
+\usepackage{multicol}
+
+\hypersetup{colorlinks=true,citecolor=[rgb]{0,0.4,0}}
+
+\oddsidemargin=15pt
+\evensidemargin=5pt
+\hoffset-45pt
+\voffset-55pt
+\topmargin=-4pt
+\headsep=5pt
+\textwidth=1120pt
+\textheight=595pt
+\paperwidth=1200pt
+\paperheight=700pt
+\footskip=40pt
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+%\newtheorem*{main}{Main Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\newenvironment{claim}[1]{\par\noindent\underline{Claim:}\space#1}{}
+\newenvironment{claimproof}[1]{\par\noindent\underline{Proof:}\space#1}{\hfill $\blacksquare$}
+
+%This defines a new command \questionhead which takes one argument and
+%prints out Question #. with some space.
+\newcommand{\questionhead}[1]
+  {\bigskip\bigskip
+   \noindent{\small\bf Question #1.}
+   \bigskip}
+
+\newcommand{\problemhead}[1]
+  {
+   \noindent{\small\bf Problem #1.}
+   }
+
+\newcommand{\exercisehead}[1]
+  { \smallskip
+   \noindent{\small\bf Exercise #1.}
+  }
+
+\newcommand{\solutionhead}[1]
+  {
+   \noindent{\small\bf Solution #1.}
+   }
+
+
+  \title{%servetheloop dump 
+  \large servetheloop dump (for the rLoop) }
+
+\author{Ernest Yeung \href{mailto:ernestyalumni@gmail.com}{ernestyalumni@gmail.com}}
+\date{27 mai 2017}
+\keywords{Eddy current brakes}
+\begin{document}
+
+\definecolor{darkgreen}{rgb}{0,0.4,0}
+\lstset{language=Python,
+ frame=bottomline,
+ basicstyle=\scriptsize,
+ identifierstyle=\color{blue},
+ keywordstyle=\bfseries,
+ commentstyle=\color{darkgreen},
+ stringstyle=\color{red},
+ }
+%\lstlistoflistings
+
+\maketitle
+
+
+\noindent gmail        : ernestyalumni \\
+linkedin     : ernestyalumni \\
+twitter      : ernestyalumni \\
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+
+\begin{multicols*}{2}
+
+  
+
+
+
+\begin{abstract}
+servetheloop notes "dump" - I dump all my notes, including things that I tried but are wrong, here.  
+
+\end{abstract}
+
+\part{Eddy Currents, Eddy Current Braking}
+
+\section{Eddy Currents}
+
+\emph{Keywords:} Eddy currents;
+
+cf. Smythe (1968), Ch. X (his Ch. 10) \cite{Smyt1968}
+
+Assume Maxwell's "displacement current" is negligible; this is ok if frequencies are such that wavelength $\lambda$ large compared to dimensions of apparatus $L$.  $\lambda \gg L$ or $\frac{c}{\nu} \gg L$.  
+
+I will write down the "vector calculus" formulation of electrodynamics, along side Maxwell's equations, or electrodynamics, over spacetime manifold $M$.  The latter formulation should specialize to the "vector calculus" formulation.  
+
+From 
+\[
+\text{curl} \mathbf{E} = -\frac{d\mathbf{B}}{dt} \, (SI) \qquad \, \text{curl}\mathbf{E} = -\frac{1}{c} \frac{ \partial \mathbf{B}}{ \partial t} \, (cgs) \text{ or } \frac{ \partial B}{ \partial t} + \mathbf{d}E = 0 
+\]
+Suppose $B = \text{curl} A$ or $B=\mathbf{d}A$ (EY 20170528: is this where the assumption above about $\lambda \gg L$ comes in?), then
+\[
+\begin{gathered}
+	-\frac{\partial B}{ \partial t} = \mathbf{d}E \xrightarrow{ \int_S } \int_S \mathbf{d}E = \int_{ \partial S} E = -\int_S \frac{ \partial B}{ \partial t} \xrightarrow{ B = \mathbf{d}A } -\int_S \frac{ \partial }{ \partial t} \mathbf{d}A \xrightarrow{ \text{ flat space } } \int_S \mathbf{d}E = -\int_S \mathbf{d} \frac{ \partial A}{ \partial t}	
+\end{gathered}
+\]
+and so
+\begin{equation}
+	\mathbf{E} = \frac{-\partial \mathbf{A}}{ \partial t}
+\end{equation}
+up to gauge transformation, if $B = \mathbf{d}\mathbf{A} = \text{curl}\mathbf{A}$
+
+Since this $\mathbf{E}$ field is formed in a conductor, Ohm's law applies.  Let's review Ohm's law.  Smythe (1968) refers to its 6.02 Ohm's Law - Resistivity section \cite{Smyt1968}.  Indeed, in a lab, the definition of resistance can be defined as this ratio:
+\begin{equation}
+R_{AB} := \frac{ -\int_A^B \mathbf{E} }{ I_{AB} } = \frac{ V_A- V_B}{ I_{AB} } = \frac{ \varepsilon_{AB} }{ I_{AB} }
+\end{equation}
+Moving along, the right way to think about resistivity $\rho$ is to consider conductivity.  
+
+Assume current density is linear to $\mathbf{E}$ field (as $\mathbf{E}$ field pushes charges along).  This linear response is reasonable.  
+
+Also, assume current density $\mathbf{J}$ is uniform over $dA$ (i.e. surface $S$).  
+
+Define 
+\begin{equation}
+\sigma \equiv \text{ \textbf{ conductivity } }
+\end{equation}
+
+Then the empirical relation/equation that underpins \emph{Ohm's law} is 
+\begin{equation}
+\mathbf{J} = \sigma \mathbf{E}
+\end{equation}
+and define \emph{resistivity} from there:
+\begin{equation}
+\sigma := \frac{1}{\rho}
+\end{equation}
+where $\rho $ is the \emph{resistivity}. 
+
+Thus
+\[
+\begin{gathered}
+	\sigma \int_A^B -\mathbf{E} = \sigma V_{AB} = \int_A^B \mathbf{J} = I_{AB} \frac{l}{A} \\
+\frac{1}{\rho} R = \frac{l}{A} \text{ or } \boxed{ R = \rho \frac{l}{A} }
+\end{gathered}
+\]
+
+
+
+
+\end{multicols*}
+
+\begin{thebibliography}{9}
+
+
+\bibitem{Hugh2000}
+Scott B. Hughes.  \textbf{Magnetic braking: Finding the effective length over which the eddy currents form}.  
+\href{https://drive.google.com/file/d/0Bwo3W0v5P04LX29XT2NFeVY0a1E/view}{Magnetic braking: Finding the effective length over which the eddy currents form}  
+
+
+\bibitem{Smyt1968}
+William R. Smythe, \textbf{Static and Dynamic Electricity}.  3rd ed. (McGraw-Hill, New York, 1968).  
+
+
+\end{thebibliography}
+
+\end{document}
