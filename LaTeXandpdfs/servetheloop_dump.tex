@@ -75,7 +75,7 @@
 
 
   \title{%servetheloop dump 
-  \large servetheloop dump (for the rLoop) }
+  \large $\#$servetheloop dump (for the rLoop) }
 
 \author{Ernest Yeung \href{mailto:ernestyalumni@gmail.com}{ernestyalumni@gmail.com}}
 \date{27 mai 2017}
@@ -151,7 +151,7 @@ Moving along, the right way to think about resistivity $\rho$ is to consider con
 
 Assume current density is linear to $\mathbf{E}$ field (as $\mathbf{E}$ field pushes charges along).  This linear response is reasonable.  
 
-Also, assume current density $\mathbf{J}$ is uniform over $dA$ (i.e. surface $S$).  
+Also, assume current density $\mathbf{J}$ is uniform over infinitesimal surface area $dA$ (i.e. surface $S$).  
 
 Define 
 \begin{equation}
@@ -177,6 +177,104 @@ Thus
 \]
 
 
+From Maxwell's Equations, 
+\begin{equation}
+	\mathbf{\delta}(B - 4\pi \mathbf{M} ) = \frac{4\pi }{c} J_{\text{free}} 
+\end{equation}	
+
+If $B=H+4\pi M = (1+4\pi \chi_m) H = \mu H$, 
+then
+\begin{equation}
+\mathbf{\delta}H = \mathbf{\delta} \frac{B}{\mu} = \frac{ 4\pi }{c} J_{\text{free} }\text{ or } \mathbf{\delta} B = \mu \frac{4\pi }{c} J_{\text{free}} \Longleftrightarrow \text{curl} B = \mu J_{\text{free}} \qquad \, (SI)
+\end{equation}
+and if $B=\mathbf{d}A$ and $\mathbf{d} \mathbf{\delta}A =0$.  
+
+%\subsubsection{Eddy Currents}
+
+I build upon the physical setup proposed by Jackson (1998) \cite{Jack1998} in Section 5.18 "Quasi-Static Magnetic Fields in Conductors; Eddy Currents; Magnetic Diffusion."   
+
+For a system (with characteristic) length $L$, $L$ being small, \\
+compared to electromagnetic wavelength associated with dominant time scale of problem $T$, 
+\[
+\begin{gathered}
+	f := \frac{1}{T} ; \quad \, \omega = 2\pi f ; \quad \, \omega \lambda = c \Longrightarrow \lambda = \frac{c}{ \omega } = \frac{c}{ 2\pi f } = \frac{Tc}{2\pi }  \\
+\frac{L}{\lambda} = \frac{LTc}{2\pi } \gg 1
+\end{gathered}
+\]
+From Maxwell's equations, in particular, Faraday's Law, and in its integral form (over 2-dim. \emph{closed} surface $S$), 
+\begin{equation}
+\begin{gathered}
+\mathbf{d}E + \frac{ \partial }{ \partial t } B = 0 \text{ or } -\mathbf{d}E =\frac{ \partial B}{ \partial t} \xrightarrow{ \int_S } \int_S \frac{ \partial B}{ \partial t} = -\int_S \mathbf{d}E = -\int_{\partial S} E
+\end{gathered}
+\end{equation}
+So on $S$, changing magnetic flux $\int \frac{ \partial B}{ \partial t}$ results in $E$ field, circulating around boundary of $S$, $\partial S$.  
+
+We know that in a conductor, free conducting electrons get pushed around by $E$ fields, result in a current density $J$.  
+
+$J$ is related to $E$, \emph{empirically} (by Ohm's Law)
+\[
+J = \sigma E
+\]
+where $\sigma$ is the resistivity.  
+
+Then use the force law on this induced current $J$ from the $B$ field set up:
+\[
+F_{\text{net}} = \frac{1}{c} \int_S J\times B dA
+\]
+By working through the right-hand rule, $F_{\text{net}}$ the force on those currents induced in the conductor due to the $B$ that's there, is in the direction to help oppose changing (increasing or decreasing $\frac{\partial B}{ \partial t}$).  
+
+To find $B$, suppose $B=dA$, i.e. $B\in H^2_{\text{deRham}}(M)$, i.e. $B=\text{curl}A$.  
+
+For sure, 
+\[
+\mathbf{\delta} (B-4\pi c \mathbf{M}) = 4\pi J \Longleftrightarrow \text{curl}(B-4\pi c \mathbf{M} ) = \text{curl} H = 4\pi J
+\]
+Be warned now that the relation $B=\mu H$ may not be valid on all domains of interest; $\mu$ could even be a tensor! (e.g. $B_{ij} = \mu^{kl}_{ij} H_{kl}$).  However, both Jackson (1998) \cite{Jack1998} in Sec. 5.18 Quasi-Static Magnetic Fields in Conductors; Eddy Currents; Magnetic Diffusion, pp. 219, and Smythe (1968), Ch. X (his Ch. 10), pp. 368 \cite{Smyt1968}, continues on \emph{as if} this relation is linear: $B=\mu H$.  
+
+Nevertheless, as we want to find $B$ by finding its "vector potential" $A$, we obtain a diffusion equation: 
+\begin{equation}\label{Eq:EddyCurrentsAdiffusion}
+\begin{gathered}
+	- \mathbf{\delta}B = \mathbf{*d*d}A = (-1) \mathbf{\delta d} A = (-1)( \Delta - \mathbf{d\delta} ) A \xrightarrow{ \mathbf{d\delta} A = 0 } - \Delta A = \\
+	= 4\pi \mu J = 4\pi \mu \sigma E = 4\pi \mu \sigma \left( -\frac{ \partial A}{ \partial t} \right) \\
+\Longrightarrow \boxed{ \Delta A = 4\pi \mu \sigma \frac{ \partial A}{ \partial t } }
+\end{gathered}
+\end{equation}
+where in the first 2 steps (equalities), $- \mathbf{\delta}B = \mathbf{*d*d}A = (-1) \mathbf{\delta d} A$ it's interesting to note that the codifferential $\mathbf{\delta}$ for the 2 form $B$ had to be written out explicitly, and then the codifferential for the 1-form $A$ is \emph{different} from the $\mathbf{\delta}$ for $B$ by a(n important) factor of $(-1)$; where $\mathbf{d\delta} A=0$ must be satisfied by the form $A$ takes; and where, since $B=\mathbf{d}A$,
+\begin{equation}
+\begin{gathered}
+	\mathbf{d}E + \frac{ \partial B}{ \partial t} = \mathbf{d} E + \frac{ \partial }{ \partial t} \mathbf{d} A = \mathbf{d} \left( E+ \frac{ \partial A}{ \partial t} \right) = 0 \Longrightarrow E = -\frac{ \partial A}{ \partial t} + \text{grad}\Phi \xrightarrow{ \Phi = \text{ constant } } E = -\frac{ \partial A}{ \partial t}
+\end{gathered}
+\end{equation}
+whereas a choice of gauge for $E$ was chosen so that $\Phi=\text{constant}$ (and so a particular form for $E$ was chosen, amongst those in the \emph{same} equivalence class of $H^1_{\text{deRham}}(M)$.  
+
+To ensure that the differential geometry formulation is in agreement with the practical vector calculus formulation, compare Eq. \ref{Eq:EddyCurrentsAdiffusion} with Eq. (5.160) of Jackson (1998) \cite{Jack1998} and Eq. (10) in Sec. 10.00 of Smythe (1968) \cite{Smyt1968}.  
+
+To summarize what's going on, I think one should at least understand in one's head how Maxwell's Equations apply, (and I will try to write in SI here)
+\begin{equation}
+\boxed{
+\begin{gathered}
+\int_S \frac{ \partial \mathbf{B}}{ \partial t} dA = -\oint \mathbf{E}\cdot d\mathbf{s} \Longrightarrow \mathbf{J}=\sigma \mathbf{E} \Longrightarrow \mathbf{F}_{\text{net}} = \int_S \mathbf{J} \times \mathbf{B} dA  \\
+\text{ find } \mathbf{B} = ? \qquad \, \text{ using form } \mathbf{B} = \nabla \times \mathbf{A}, \\
+\nabla^2 \mathbf{A} = \mu \sigma \frac{ \partial \mathbf{A} }{ \partial t} \qquad \, (SI)
+\end{gathered}
+}
+\end{equation}
+where, a change in magnetic flux over a surface $S$ over the conductor, $\int_S \frac{ \partial \mathbf{B}}{ \partial t}dA$ induces a circulation of $E$ field around $S$, $-\oint \mathbf{E} \cdot d\mathbf{s}$, and this $E$ field is pushing around \emph{free conducting charges} according to Ohm's law, $\mathbf{J} = \sigma \mathbf{E}$, with $\sigma$ being the conductivity of the conducting material, and this current density $\mathbf{J}$ is then acted upon by the prevailing $B$ field, according to the usual force law.  To find $\mathbf{B}$, one can find $\mathbf{A}$ and \emph{try} to find $\mathbf{A}$ analytically.  
+
+Keep in mind that for $\nabla^2 \mathbf{A} = \mu \sigma \frac{ \partial \mathbf{A}}{ \partial t}$, we had used, critically, the Maxwell equation $\mathbf{\nabla} \times \mathbf{H} = \mathbf{J}$, with $\mathbf{J}$ being the \emph{induced current of free conducting charges on the conductor}.  This $\mathbf{H}$ will contribute (through linear superposition) to the $\mathbf{B}$ that could already be there due to the permanent magnet.  
+
+What can we measure quantitatively?
+\begin{itemize}
+\item Can we measure $\mathbf{J}$ inside (on) the conductor?
+\item Can we separate magnetization $\mathbf{M}$ of material from $\mathbf{B}$, to obtain the actual $\mathbf{B}$ (and then use linear superposition, $\mathbf{B}_{\text{total}} = \mathbf{B}_{\text{permanent magnet}} + \mathbf{B}_{\text{induced currents}}$? 
+\end{itemize}
+
+Also, keep in mind the context that the conductor at hand is the long, almost semi-infinite rectangle of a conductor, aluminum sub-rail, specified by the SpaceX Hyperloop.  Force on that will cause an equal and opposite force on the pod, with its permanent magnets attached, and thus braking the pod.   
+
+
+
+
+ 
 
 
 \end{multicols*}
@@ -191,6 +289,9 @@ Scott B. Hughes.  \textbf{Magnetic braking: Finding the effective length over wh
 
 \bibitem{Smyt1968}
 William R. Smythe, \textbf{Static and Dynamic Electricity}.  3rd ed. (McGraw-Hill, New York, 1968).  
+
+\bibitem{Jack1998}
+J.D. Jackson.  \textbf{Classical Electrodynamics} Third Edition.  Wiley.  1998.   ISBN-13: 978-0471309321
 
 
 \end{thebibliography}
