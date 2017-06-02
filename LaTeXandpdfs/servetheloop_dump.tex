@@ -271,10 +271,250 @@ What can we measure quantitatively?
 
 Also, keep in mind the context that the conductor at hand is the long, almost semi-infinite rectangle of a conductor, aluminum sub-rail, specified by the SpaceX Hyperloop.  Force on that will cause an equal and opposite force on the pod, with its permanent magnets attached, and thus braking the pod.   
 
+\part{System Theory, including Avionics}
 
+cf. Hermann (1974) \cite{Herm1974}.  
 
+For a given field $\mathbb{K} = \mathbb{R} \text{ or } \mathbb{C}$ (or some field, in general).  
 
+Let $U,X,Y$ be either vector spaces (or more generally, $R$-modules, with $R=\mathbb{K}$), or manifolds.   Let
+\[
+\begin{aligned}
+	& U \equiv \text{ input space } \\
+	& Y \equiv \text{ output space } \\
+	& X \equiv \text{ state space } \\
+\end{aligned}
+\]
+
+Consider maps $f,g$, s.t. 
+\begin{equation}
+	\begin{gathered}
+	\begin{aligned} 
+& f: X\times U \to X \\
+	& g : x \times U \to Y \end{aligned} \\
+\begin{aligned}
+	& \frac{dx}{dt} = f(x,u) \\ 
+	& y(t) = g(x(t),u(t))  
+\end{aligned}
+\end{gathered}
+\end{equation}
  
+Ordered 5-tuple $\sigma = (U,X,Y,f,g)$ is a \textbf{system}.  
+
+$t \mapsto (x(t),u(t),y(t)) \in X\times U \times Y =: $ \textbf{trajectory} of system, they're solutions to $\frac{dx}{dt} = f(x,u)$.  
+
+\begin{definition}
+	Input-output pair: $t\mapsto (u(t),y(t)) \in U\times Y$ if $\exists \, $ curve $t\mapsto x(t) \in X$ s.t. 
+\begin{equation}
+t\mapsto (x(t),u(t),y(t))
+\end{equation}
+\end{definition}
+
+Choose input curve $t\mapsto u(t)$ so to achieve some desired output $t\mapsto y(t)$.  
+
+If we have linear maps $f,g$ or at least "linearize" the system, then $f,g$ take forms 
+\begin{equation}
+\begin{gathered} 
+\begin{aligned}
+& f(x,u) = Ax+Bu \\ 
+& g(x,u) = Cx+Du
+\end{aligned}  \\
+\begin{aligned}
+	& A:X\to X \\ 
+	& B: U\to X \\ 
+	& C: X\to Y \\ 
+	& D: U\to Y
+\end{aligned}
+\end{gathered}
+\end{equation}
+
+And so, for a (linear) system $(X,U,Y,A,B,C,D,)$, s.t. 
+\[
+\begin{aligned}
+	& \frac{dx}{dt} = Ax(t) + Bu(t) \\ 
+	& y(t) = Cx(t) + Du(t) 
+\end{aligned}
+\]
+Discretize $t$ or replace differential with difference equations.  And so for  \\
+$t\in $ additive semigroup $\mathbb{Z}^+$, 
+\begin{equation}
+\begin{gathered}
+\begin{aligned}
+	& t \mapsto u(t) \in \mathbb{Z}^+ \to U \\ 	
+	& t \mapsto y(t) \int \mathbb{Z}^+ \to Y
+\end{aligned} \\
+	 \frac{du}{dt} \xrightarrow{ \text{ discretize } } \Delta u(t) = u(t+1) - u(t) \\
+\begin{aligned}
+	& \Delta u(t) = Ax(t) + Bu(t) \\ 
+	& y(t) = Cx(t) + Du(t)
+\end{aligned}
+\end{gathered}
+\end{equation}
+
+Equivalence of systems with same $X,U,Y$.  
+
+Let $GL(X) = \lbrace g | g:X \to X \rbrace$.  
+
+Given $t \mapsto (x(t),u(t),y(t))$ s.t. it's a solution to 
+\begin{equation}
+\begin{aligned}
+	& \frac{dx}{dt} = Ax(t) + Bu(t) \\ 
+	& y(t) = Cx(t) + Du(t) 
+\end{aligned} \qquad \, (3.2 of Hermann (1974))  
+\end{equation}
+cf. Hermann (1974) \cite{Herm1974}.  
+
+Set 
+\begin{equation}
+	x_1(t) = gx(t) 
+\end{equation}
+Then
+\[
+\begin{gathered}
+	\begin{gathered}
+	\frac{dx_1(t)}{dt} = g\frac{dx}{dt} = g(Ax+Bu) = A_1x_1 + B_1u  \qquad \, \text{ and so }  \begin{aligned} & A_1 = gAg^{-1}  \\
+& B_1= gB \end{aligned} 
+\end{gathered}
+\begin{gathered}
+y(t) = Cg^{-1}x_1 + Du = C_1x_1 + D_1 u \qquad \, \text{ with } \begin{aligned} & C_1 = Cg^{-1} \\ 
+& D_1 = D \end{aligned}
+\end{gathered}
+\end{gathered}
+\]
+\[
+\Longrightarrow \sigma_1 = (U,X,Y,A_1 ,B_1, C_1,D_1) 
+\]
+$\sigma,\sigma_1$ automatically have the same input-output pairs.  
+
+\begin{definition}
+\begin{equation}	\begin{aligned} 
+	& \sigma = (A,B,C,D) \\
+	& \sigma_1 = (A_1,B_1,C_1,D_1) \end{aligned}
+\end{equation}  2 linear systems with same state, input, output space $X,U,Y$, 
+$\sigma,\sigma_1$ \textbf{ algebraically equivalent  } iff $\exists \, g \in GL(V)$ s.t. 
+\begin{equation}
+\begin{aligned}
+& A_1 = gAg^{-1} \\ 
+& B_1 = gB \\ 
+& C_1 = Cg^{-1} \\ 
+& D_1 = D
+\end{aligned}
+\end{equation}
+\end{definition}
+i.e. Let $\Sigma = \lbrace \sigma \rbrace =$ collection of linear systems $\sigma = (A,B,C,D)$, \\
+i.e. $\Sigma = L(X,X) \times L(U,X) \times L(X,Y) \times L(U,Y)$.  
+
+Let $GL(X) = \lbrace g|g:X\to X, \, \forall \, g, \, \exists g^{-1} \rbrace$.  
+
+If $g\in GL(X)$ and 
+\[
+\sigma = (A,B,C,D) \in \Sigma
+\]
+then 
+\[
+g\sigma = (gAg^{-1}, gB,Cg, D)
+\]
+\begin{theorem}[3.2] 
+	equivalence classes in 1-to-1 correspondence with \textbf{orbit space } $GL(X) \backslash \Sigma$.  
+\end{theorem}
+
+\subsubsection{cf. 4. Impulse response and Transfer Functions: Observatibility and Controllability of Hermann (1974) \cite{Herm1974}.  }
+
+From Eq. (3.2) of Hermann (1974) \cite{Herm1974}, i.e. $\begin{aligned} & \quad \\ 
+	& \dot{x} = Ax + Bu \\
+	& y = Cx+Du \end{aligned}$, i.e. linear, time-invariant, "lumped parameter" systems.  
+
+"weighting parameter" $=$ "impulse response".  
+
+It's easy to solve
+\[
+\dot{x} = Ax + Bu 
+\]
+with solution
+\[
+x(t) = \int_0^t \exp{ (A(t-s) )} Bu(s)ds + \exp{(At)} x(0)
+\]
+since
+\[
+y = \int_0^t Ce^{A(t-s)} Bu(s)ds + Ce^{At} x(0) + Du
+\]
+i.e. by variation of parameters method.  
+
+Consider 
+\[
+\begin{gathered}
+	\dot{x}^1 - Ax^1 = 0 \\
+x^1 = \exp{(At)}
+\end{gathered}
+\]
+If $x_p(t) = c_1(t)x^1(t) = c_1 \exp{ (At) }$, 
+\[
+\begin{gathered}
+\dot{x}_p = c_1e^{At} + c_1 Ae^{At} \\ 
+\dot{x}_p = Ax_p - Bu = \dot{c}_1 + c_1 A - Ac_1 - Bu = 0  \\
+\dot{c}_1 = Bu \text{ or } c_1 = \int_0^t ds Bu(s) \\
+c_1(0) = x(0)   \qquad \, \text{ (EY : 20170602 I'm not sure if this is the right derivation) } 
+\end{gathered}
+\]
+\begin{definition}
+	Function 
+\begin{equation}
+	t\mapsto Ce^{At}B , \qquad \, R \to L(U,Y)
+\end{equation}
+is called \textbf{ impulse response } for system $\sigma = (A,B,C,D)$
+\end{definition}
+
+Its Laplace transform 
+\begin{equation}
+	s=C(A\cdot s)^{-1}B
+\end{equation}
+is called \textbf{frequency response} of system.  
+
+\textbf{Remarks} A) \textbf{Resolvants}.  In functional analysis, operator-valued function $s\mapsto (A\cdot s)^{-1}$ is called resolvant of operator$A$.  
+
+\begin{theorem}[4.1 Hermann (1974) \cite{Herm1974}]
+Let 
+\[
+\begin{aligned}
+&	\sigma = (U,X,Y,A,B,C,D) \\ 
+&	\sigma_1 = (U,X_1,Y,A_1,B_1,C_1,D_1) \\ 
+\end{aligned}
+\]
+Suppose $\sigma,\sigma_1$ equivalent, same input-output pairs.  Then
+\begin{equation}
+	C(A\cdot s)^{-1}B = C_1(A_1\cdot s)^{-1}B_1 \qquad \, s \in \mathbb{C}
+\end{equation}
+i.e. they have the same frequency responses.  Also $D=D_1$
+\end{theorem}
+
+\begin{proof}
+Let $t \mapsto u(t)$ input curve, $x(0)$ initial state vector.  
+
+$t\mapsto y(t)$ output curve determined by $(t\mapsto u(t), x(0))$ in system $\sigma$.  
+
+Using Eq. (4.4) Hermann (1974) \cite{Herm1974}, 
+\begin{equation}
+\begin{gathered}
+	y = \int_0^t Ce^{A(t-s) } Bu(s) ds + Ce^{At} x(0) + Du \\ 
+y(t) = \int_0^t Ce^{A(t-s)} Bu(s) ds + Ce^{At } x(0) + Du(t) 
+\end{gathered}
+\end{equation}
+By hypotheses, $\sigma,\sigma_1$ equivalent, so  \\
+
+state vector $x_1(0) \in X$, s.t.
+\[
+(t\mapsto u(t), x_1(0)) \text{ determines } t\mapsto y(t), \text{ i.e. } 
+\]
+\[
+y(t) = \int_0^t C_1 e^{A_1(t-s) } B_1u(s) ds + C_1 e^{A_1t } x_1(0) + D_1u(t)
+\]
+
+... 20170602 ...
+
+\end{proof}
+
+
+
 
 
 \end{multicols*}
@@ -293,6 +533,9 @@ William R. Smythe, \textbf{Static and Dynamic Electricity}.  3rd ed. (McGraw-Hil
 \bibitem{Jack1998}
 J.D. Jackson.  \textbf{Classical Electrodynamics} Third Edition.  Wiley.  1998.   ISBN-13: 978-0471309321
 
+\bibitem{Herm1974}
+Robert Hermann.  \textbf{Linear Systems Theory \& Introductory Algebraic Geometry (Interdisciplinary Mathematics Series)}.  Math Science Pr (June 1974)
+ISBN-13: 978-0915692071
 
 \end{thebibliography}
 
