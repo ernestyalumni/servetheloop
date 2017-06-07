@@ -514,8 +514,100 @@ y(t) = \int_0^t C_1 e^{A_1(t-s) } B_1u(s) ds + C_1 e^{A_1t } x_1(0) + D_1u(t)
 \end{proof}
 
 
+\part{Screws, Bolts, Fasteners (through Shigley's Mechanical Engineering Design)}
 
+cf. Budynas and Nisbett (2014) \cite{BuNi2014}.  
 
+\section{Screws, Fasteners, Design of Nonpermanent Joints}
+
+cf. Ch. 8 "Screws, Fasterners, and the Design of Nonpermanent Joints", Budynas and Nisbett (2014) \cite{BuNi2014}.  
+
+cf. Section 8-1, "Thread Standards and Definitions", pp. 410, Budynas and Nisbett (2014) \cite{BuNi2014}.  
+ 
+pitch $\equiv $ distance between adjacent thread forms, measured parallel to thread axis.  
+
+$N :=$ number of thread forms per unit length (per inch U.S.); pitch $=1/N$  
+
+$d\equiv $ major diameter $:=$ largest diameter of screw thread.  
+
+$d_r \equiv $ minor (or root) diameter $=$ smallest diameter of screw thread.  
+
+$l \equiv $ lead $=$ distance nut moves parallel to screw axis when nut given $1$ turn for \\
+single thread $=l=p$  \\
+multiple-threaded $- 2 $ or more threads out beside each other (imagine 2 or more strings wound side by side around a pencil).  \\
+double-threaded $\to l = 2p$  \\
+triple-threaded $\to l=3p$  
+
+Imagine square-threaded power screw, single thread, unrolled or developed, for exactly single turn.  
+
+$d_m:= $ mean thread diameter circle.  $\lambda := $ lead angle of thread.  
+
+Consider sum of all forces \textbf{on} the single screw thread.  
+
+To raise load, force $P_R$ acts to the right \textbf{on} single screw thread.   \\
+$\mathbf{P}_R = (P_R,0)$ ; \, $P_R >0$ \\
+$\mathbf{N}= N (-\sin{\lambda}, \cos{\lambda} )$  \\ 
+friction force $\mathbf{fN} \, \text{ (Shigley) } \equiv - \mu N(\cos{\lambda}, \sin{\lambda})$ \\
+$\mathbf{F} =$ sum of all axial forces acting upon normal thread area $=(0,-F)$.  
+
+\begin{equation}
+	\mathbf{P}_R + \mathbf{N} + \mathbf{fN} + \mathbf{F} = (P_R-N\sin{\lambda} , - \mu N \cos{\lambda}, N\cos{\lambda} - \mu N\sin{\lambda}, -F)
+\end{equation}
+Surely $(\mathbf{P}_R + \mathbf{N} + \mathbf{fN} + \mathbf{F})_x =0$, so that $P_R = N( \sin{\lambda} + \mu \cos{\lambda})$.  
+
+We can imagine $m_{\text{thread}} a_{\text{thread}} = N (\cos{\lambda} - \mu \sin{\lambda}) -F = \frac{P_R}{ \sin{\lambda} + \mu \cos{\lambda} }(\cos{\lambda} - \mu\sin{\lambda} ) -F \neq 0 $
+
+Lowering load, $P_L$ acts to the left \textbf{on} simple screw thread.  
+
+$\mathbf{P}_L = (-P_L ,0)$; $\mathbf{fN} \equiv \mu N(\cos{\lambda}, \sin{\lambda})$.  
+
+\begin{equation}
+\sum_{\text{ on single screw thread} } \mathbf{F}_i = \mathbf{P}_L + \mathbf{N} + \mathbf{fN} + \mathbf{F} = (-P_L - N\sin{\lambda} + \mu N \cos{\lambda}, N\cos{\lambda} + \mu N \sin{\lambda} - F)
+\end{equation}
+Surely $(\mathbf{P}_L + \mathbf{N} + \mathbf{fN} + \mathbf{F})_x =0$ so that $P_L = N(\mu \cos{\lambda} - \sin{\lambda} )$.  
+
+We can imagine 
+\[
+m_{\text{thread}} a_{\text{thread},y} = F_{\text{net},y} = N(\cos{\lambda} + \mu \sin{\lambda}) - F = \frac{ P_L}{ \mu \cos{\lambda} - \sin{\lambda} } (\cos{\lambda} +\mu \sin{\lambda} ) - F
+\]
+
+At equilibrium of forces,
+
+For raising load, 
+\[
+\begin{gathered}
+	\mathbf{\tau} = \mathbf{r} \times \mathbf{P} = \mathbf{r} \times \mathbf{P}_R = \mathbf{r} \times \left( F \left( \frac{ \sin{ \lambda } + \mu \cos{\lambda} }{ \cos{ \lambda} - \mu \sin{\lambda}  } \right) \right) = \mathbf{r} \times \left( F \left( \frac{ \tan{ \lambda } + \mu  }{ 1 - \mu \tan{\lambda}  } \right) \right) = \\
+= \mathbf{r} \times F \left( \frac{ \frac{ l}{ \pi d_m } + \mu }{ 1 - \mu \frac{l}{\mu d_m } } \right) = \mathbf{r} \times F \left( \frac{ l + \mu d_m \pi }{ \mu d_m - \mu l } \right)
+\end{gathered}
+\]
+For lowering load, 
+\[
+\begin{gathered}
+	\mathbf{\tau} = \mathbf{r} \times \mathbf{P} = \mathbf{r} \times \mathbf{P}_L = \mathbf{r} \times \left( F \left( \frac{  \mu \cos{ \lambda } -  \sin{\lambda} }{ \cos{ \lambda} + \mu \sin{\lambda}  } \right) \right) = \mathbf{r} \times \left( F \left(   \frac{ \mu -  \tan{ \lambda }   }{ 1 + \mu \tan{\lambda}  } \right) \right) = \\
+= \mathbf{r} \times F \left( \frac{ \mu -  \frac{ l}{ \pi d_m }  }{ 1 + \mu \frac{l}{\mu d_m } } \right) = \mathbf{r} \times F \left( \frac{ \pi \mu d_m - l }{ \pi d_m + \mu l } \right)
+\end{gathered}
+\]
+
+Load lowers itself, by causing screw to spin without external effort.  
+\begin{equation}
+	\mathbf{\tau}_L  = \mathbf{r} \times F \left( \frac{ \pi d_m \mu - l }{ \pi d_m + \mu l } \right)  \leq 0 \text{ or } \mu \leq \tan{\lambda} 
+\end{equation}
+If $\tau_L >0$, screw is \textbf{self-locking}; in this case, $\mu > \tan{\lambda}$
+
+Efficiency expression (for power screws)
+\begin{equation}
+\begin{gathered}
+	\tau_0(\mu = 0)  = \frac{d_m}{2} F\left( \frac{l }{ \pi d_m} \right)  = \frac{Fl}{2\pi }
+\end{gathered}
+\end{equation}
+Since thread friction has been eliminated, torque required only to raise the load.  
+
+Then define efficiency $\epsilon_{\text{load}}$ as 
+\begin{equation}
+\begin{gathered}
+	\epsilon_{\text{load}} = \frac{ \tau_0 }{ \tau_R} = \frac{Fl}{2\pi \tau_R} = \frac{Fl}{ 2\pi  \frac{d_m}{2} F \left( \frac{ l + \mu d_m \pi }{ \pi d_m - \mu l } \right) } = \frac{l}{ \pi d_m} \left( \frac{ \pi d_m - \mu l }{ l + \mu d_m \pi } \right) = \frac{1 - \frac{ \mu l }{ \pi d_m } }{ 1 + \frac{ \mu d_m \pi }{ l }  } 
+\end{gathered}
+\end{equation}
 
 \end{multicols*}
 
@@ -536,6 +628,12 @@ J.D. Jackson.  \textbf{Classical Electrodynamics} Third Edition.  Wiley.  1998. 
 \bibitem{Herm1974}
 Robert Hermann.  \textbf{Linear Systems Theory \& Introductory Algebraic Geometry (Interdisciplinary Mathematics Series)}.  Math Science Pr (June 1974)
 ISBN-13: 978-0915692071
+
+\bibitem{BuNi2014}
+Richard Budynas, Keith Nisbett.  \textbf{Shigley's Mechanical Engineering Design} (McGraw-Hill Series in Mechanical Engineering) 10th Edition.  McGraw-Hill Series in Mechanical Engineering.  ISBN-13: 978-0073398204
+
+EY : 20170606 -  I was only able to obtain a copy of the 9th edition to use.  If you'd like to help us keep up to date with the 10th edition or to help the rLoop in general, please donate to the \href{rLoop}{www.rLoop.org}!
+
 
 \end{thebibliography}
 
