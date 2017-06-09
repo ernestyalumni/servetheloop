@@ -533,7 +533,7 @@ $d\equiv $ major diameter $:=$ largest diameter of screw thread.
 $d_r \equiv $ minor (or root) diameter $=$ smallest diameter of screw thread.  
 
 $l \equiv $ lead $=$ distance nut moves parallel to screw axis when nut given $1$ turn for \\
-single thread $=l=p$  \\
+single thread $=l=p$ ($p$ is \emph{pitch}) \\
 multiple-threaded $- 2 $ or more threads out beside each other (imagine 2 or more strings wound side by side around a pencil).  \\
 double-threaded $\to l = 2p$  \\
 triple-threaded $\to l=3p$  
@@ -608,6 +608,93 @@ Then define efficiency $\epsilon_{\text{load}}$ as
 	\epsilon_{\text{load}} = \frac{ \tau_0 }{ \tau_R} = \frac{Fl}{2\pi \tau_R} = \frac{Fl}{ 2\pi  \frac{d_m}{2} F \left( \frac{ l + \mu d_m \pi }{ \pi d_m - \mu l } \right) } = \frac{l}{ \pi d_m} \left( \frac{ \pi d_m - \mu l }{ l + \mu d_m \pi } \right) = \frac{1 - \frac{ \mu l }{ \pi d_m } }{ 1 + \frac{ \mu d_m \pi }{ l }  } 
 \end{gathered}
 \end{equation}
+
+
+\section{Ball Screws; ball screw} 
+
+cf. \href{https://www.thk.com/sites/default/files/documents/uk_pdf/product/general/a/ee_A15.pdf}{THK Ball Screw, General Catalog}
+
+THK provided an excellent overview of the equations/relations (and thus the physics) behind ball screws (THK, \href{https://www.thk.com/sites/default/files/documents/uk_pdf/product/general/a/ee_A15.pdf}{THK Ball Screw, General Catalog}).  
+
+I will include THK's notation and my notation, side by side.  
+
+Let \\
+$\beta \equiv \lambda \equiv$ lead angle  \\
+$d_p \equiv $ Ball center-to-center diameter \\
+$\text{Ph} \equiv l \equiv $ feed screw lead (feed screw is that long piece, the screw; lead is distance but moves in 1 turn) (mm) \\
+\begin{equation}
+	\tan{\beta} = \frac{l}{\pi d_p} 
+\end{equation}
+
+\subsection{Driving torque required to gain thrust} 
+
+Let 
+$T \equiv \tau := $ driving torque ($N \cdot mm$) \\
+$Fa \equiv f_a := $ frictional resistance on guide surface ($N$) \\
+$Fa= \mu \times mg \equiv \mu Mg$ \\
+$\mu := $ frictional coefficient of the guide surface  \\
+$g := $ gravitational acceleration ($9.8 \, m/s^2$)  \\
+$gm \equiv M =$ mass of trasnferred object (kg).  \\
+$\eta_1 :=$ positive efficiency of feed screw (see Fig. 1 on A-682 (rotational to linear), from Fig. 1, $0.003 \leq \mu \leq 0.02$ 
+\begin{equation}
+\tau =  \frac{ f_a l }{ 2\pi \eta_1 }
+\end{equation}
+$\eta_1$ efficiency is either rotational to linear energy, or force.  I believe it's a ratio between magnitude of forces.  
+
+
+cf. \href{http://web.mit.edu/2.75/fundamentals/FUNdaMENTALs\%20Book\%20pdf/FUNdaMENTALs\%20Topic\%206.PDF}{FUNdaMENTALS of Design, Topic 6, Power Transmission Elements II, by Alexander Slocum, 2008}.  
+
+
+cf. \href{https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt2.html}{Introduction to Mechanisms; 2 Mechanisms and Simple Machines}.  
+
+Taking a look at \emph{2 Mechanisms and Simple Machines}, Sec. \emph{2.1.1 Screw Jack}, for Introduction to Mechanisms by Yi Zhang, with Susan Finger and Stephannie Behrens, for \href{https://www.cs.cmu.edu/~rapidproto/home.html}{39-245} Rapid Design through Virtual and Physical Prototyping at Carnegie Mellon University, let \\
+$\mathbf{W} :=$ heavy weight to raise $= W(-\mathbf{e}_z)$, \\
+$\mathbf{F}:=$ much smaller force applied at handle, \\
+$p \equiv l :=$ pitch of screw (distance advanced in 1 complete turn) $=l$, then \\
+neglecting friction, \\
+force multipled by distance through which it moves in one complete turn $=$ weight lifted times distance through which it's lifted in same time, 
+
+and so by energy conservation
+\[
+F(2\pi R) = Wp \equiv Wl \text{ or } F = \frac{Wp }{2\pi R}
+\]
+
+\subsection{Kinematics}
+
+\subsubsection{Helix Geometry/Mathematics}
+
+Consider a circular helix of radius $a$, slope $\frac{b}{a}$ (or pitch $2\pi b$), described by parametrization 
+\[
+\begin{aligned}
+	& x(t) = a \cos{(t)} \in \mathbb{R} \\ 
+		& y(t) = a \sin{(t)} \in \mathbb{R} \\ 
+	& z(t) = b(t) \in \mathbb{R}
+\end{aligned}
+\]
+Clearly the radius is $a$ as $x^2 + y^2 = a^2 = r^2$, and the rotation about the (symmetric) axis of rotation (in $z$ direction) is $\theta \equiv \theta(t) = 0$, in \emph{radians}.  
+
+For rotation $\theta$, we travel in the $z$-direction by $z(t) =b\theta$.  So for 1 full rotation (revolution), $\theta = 2\pi$, we have in the $z$-axis by $z(t=2\pi) =2\pi b$.  
+
+In engineering (in general), in particular for screws (lead screws or ball screws), we have the \emph{lead} $l$: \\
+$l:= \text{thread lead, i.e. linear distance either screw or nut moves, i.e. (linear) translation length (for 1 full rotation (revolution)) }$.  Clearly
+\begin{equation}
+l = 2\pi b
+\end{equation}
+
+So given input torque $\tau$, efficiency for rotational motion to linear motion (i.e. linear output$/$ rotational input), $\eta_1$, 
+\begin{equation}
+\begin{gathered}
+\eta_1 \tau \theta = Fz \text{ or } \eta_1\tau \theta = F(b\theta) = F \left( \frac{l}{2\pi \theta } \right) \text{ or } \boxed{ F = \frac{2\pi \eta \tau }{l } }
+\end{gathered}
+\end{equation}
+
+
+
+
+
+
+
+
 
 \end{multicols*}
 
