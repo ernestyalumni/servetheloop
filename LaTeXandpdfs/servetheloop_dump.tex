@@ -271,7 +271,9 @@ What can we measure quantitatively?
 
 Also, keep in mind the context that the conductor at hand is the long, almost semi-infinite rectangle of a conductor, aluminum sub-rail, specified by the SpaceX Hyperloop.  Force on that will cause an equal and opposite force on the pod, with its permanent magnets attached, and thus braking the pod.   
 
-\part{System Theory, including Avionics}
+\part{System Theory, including Avionics, Embedded Systems}
+
+%\part{System Theory}
 
 cf. Hermann (1974) \cite{Herm1974}.  
 
@@ -513,6 +515,168 @@ y(t) = \int_0^t C_1 e^{A_1(t-s) } B_1u(s) ds + C_1 e^{A_1t } x_1(0) + D_1u(t)
 
 \end{proof}
 
+%\section{Embedded Systems}
+
+\section{Finite State Machines}  
+
+Lee and Seshia \cite{LeSe2017}
+
+
+\begin{definition}[memoryless, memoryless system]  
+Consider cont. time system $S: X\to Y$, where $X= A^{\mathbb{R}}$, $Y=B^{\mathbb{R}}$, 
+\[
+S:(\mathbb{R}\to A) \to (\mathbb{R} \to B) \text{ i.e. } S:L(\mathbb{R},A) \to L(\mathbb{R},B) 
+\]
+$A,B\in \textbf{Sets}$
+
+$S$ \textbf{memoryless} if $\exists \, f :A\to B$ s.t. $\forall \, x$, 
+\begin{equation}
+(S(x))(t) = f(x(t)) \qquad \, \forall \, t \in \mathbb{R}
+\end{equation}
+i.e. output $(S(x))(t)$ depends \emph{only} on $x(t)$  
+\end{definition}
+cf. Sec. 2.3.2. Memoryless Systems of Lee and Seshia (2017) \cite{LeSe2017}
+
+\begin{definition}[linear system; superposition]
+system $S:X\to Y$ is \textbf{linear} if it obeys \textbf{superposition} property:
+\begin{equation}
+\begin{gathered}
+	\forall \, x_1, x_2 \in X , \qquad \forall \, a,b, \in \mathbb{R} \\
+S(ax_1 + bx_2) = aS(x_1) + bS(x_2)
+\end{gathered}
+\end{equation}
+\end{definition}
+cf. Sec. 2.3.3. Linearity and Time Invariance of Lee and Seshia (2017) \cite{LeSe2017}
+
+
+\begin{definition}[delay]
+\textbf{delay} $D_{\tau}:X\to Y$, $X,Y = C^1(\mathbb{R})$, so $D_{\tau}: C^1(\mathbb{R}) \to C^1(\mathbb{R})$  
+\begin{equation}
+	\forall \, x \in X, \, \forall \, t \in \mathbb{R}, \, (D_{\tau}(x))(t) = x(t-\tau)
+\end{equation}
+\end{definition}
+cf. Sec. 2.3.2. Memoryless Systems of Lee and Seshia (2017) \cite{LeSe2017}
+
+\begin{definition}[time invariant]
+	system $S:X\to Y$ \textbf{time-invariant} if 
+\begin{equation}
+\begin{gathered}
+\forall \, x \in X, \, \forall \, \tau \in \mathbb{R}, \\
+	S(D_{\tau}(x)) = D_{\tau}(S(x))
+\end{gathered}
+\end{equation}
+\end{definition}
+Also, consider
+\[
+S(D_{\tau}(x))(t) = D_{\tau}(S(x))(t) = (S(x))(t-\tau)  \equiv y(t-\tau)
+\]
+e.g. Consider 
+\[
+\dot{\theta}_y(t) = \frac{1}{I_{yy}} \int_{-\infty}^t\tau_y(t')dt'  \qquad \, \text{ so } \tau_y \mapsto \dot{\theta}_y
+\]
+\[
+\begin{gathered}
+	S(D_{\tau}\tau_y) = \frac{1}{ I_{yy}} \int_{-\infty}^t \tau_y(t'-\tau) dt' \\
+D_{\tau}S(\tau_y)(t) = \frac{1}{ I_{yy}}\int_{-\infty}^{t-\tau} \tau_y(t')dt' = \frac{1}{I_{yy}}\int_{-\infty}^t \tau_y(u-\tau) du \equiv \frac{1}{ I_{yy}} \int_{-\infty}^t \tau_y(t'-\tau) dt' = \frac{1}{I_{yy}} \int_{-\infty}^t (D_{\tau}\tau_y)(t')dt' = S(D_{\tau}\tau_y)(t)  \\
+\begin{aligned}
+& t'=t-\tau \\
+& t' + \tau = t\\
+& u=t' + \tau \end{aligned}
+\end{gathered}
+\]
+
+\begin{definition}[stable, bounded-input bounded-output stable (BIBO stable or just stable)]
+system $S:X\to Y$, $X,Y = C^1(\mathbb{R})$ \textbf{stable} if $\forall \, w \in X$, s.t. $\exists \, A \in \mathbb{R}$ s.t. $|w(t) | \leq A$, \, $\forall \, t\in \mathbb{R}$,  \\
+$S(w) = v$, $\exists \, B\in \mathbb{R}$ s.t. $|S(w)(t)| = |v(t)| \leq B$, \, $\forall \, t\in \mathbb{R}$.  
+
+\end{definition}
+
+\subsubsection{Feedback Control: is it just an automorphism?}
+
+Recall physics of the helicopter example:
+\[
+\begin{gathered}
+	\dot{\theta}_y(t) = \dot{\theta}_y(0) + \frac{1}{I_{yy}} \int_0^t \tau_y(t')dt' \equiv (\text{int}(\dot{\theta}_y(0), I_{yy} ) )(\tau_y)(t), \text{ i.e. } \tau_y \xmapsto{ \text{int}(\dot{\theta}_y(0),I_{yy}) } \dot{\theta}_y
+\end{gathered}
+\]
+Let $\psi$ be example of \emph{desired behavior}, input $\psi$ specifying desired angular velocity.  
+
+Introduce error measurement $e\equiv \text{err}$:
+\[
+\begin{gathered}
+	\text{err}:\mathbb{R} \times \mathbb{R} \to \mathbb{R} \\ 
+\text{err}:\psi,\dot{\theta}_y \mapsto \psi- \dot{\theta}_y, \, \text{err}(\psi,\dot{\theta}_y)(t) = \text{err}(\psi(t),\dot{\theta}_y(t)) \equiv \text{err}(t) = \psi(t) - \dot{\theta}_y(t)
+\end{gathered}
+\]
+
+\subsection{Discrete signals}
+
+cf. 3.1 Discrete Systems of Lee and Seshia (2017) \cite{LeSe2017}
+
+\begin{definition}[discrete signal]
+\begin{equation}
+\begin{aligned}
+& e:\mathbb{R} \to \lbrace \text{ absent } \rbrace \cup X \equiv \lbrace \emptyset \rbrace \cup X \\ 
+& e:t\mapsto e(t)
+\end{aligned}
+\end{equation}
+\end{definition}
+
+Let $T\subseteq \mathbb{R}$ s.t. 
+\[
+T:= \lbrace t\in \mathbb{R} | e(t) \neq \text{ abset } \equiv \emptyset 
+\]
+i.e. set of times when there's signal  
+
+If $\exists \, $ 1-to-1 function $f:T\to \mathbb{N}$ s.t. $f$ \textbf{order-preserving}, i.e. $\forall \, t_1, t_2 \in T$, where $t_1\leq t_2$, then $f(t_1) \leq f(t_2)$.  
+
+Example: Integration $I_i$: 
+\[
+\begin{gathered}
+	\begin{aligned}
+	& I_i: \mathbb{R}^{\mathbb{R}_+} \to \mathbb{R}^{\mathbb{R}_+} \equiv I_i : (\mathbb{R}_+ \to \mathbb{R}) \to (\mathbb{R}_+ \to \mathbb{R}) \\ 
+	& y= I_i(x)
+\end{aligned}
+\end{gathered}
+\]
+where $i\equiv $ initial value of integration and $x,y$ are cont.time signals, i.e. $x,y \in C^1(\mathbb{R})$.  
+
+e.g. If $i=0$, $\forall \, t \in \mathbb{R}_+$, $x(t) = 1$, then 
+\[
+y(t) = i+ \int_0^t x(\tau) d\tau = t
+\]
+
+Example: Counter $C_i$: 
+\[
+C_i: (\mathbb{R}_+ \to \text{Set})^P \to (\mathbb{R}_+ \to \lbrace \empty \rbrace \cup \mathbb{Z} )
+\]
+with $\text{Set } \in \textbf{Set}$ so $\text{Set}$ is a \emph{particular} set., \\
+$P\in \textbf{Set}$, \\
+e.g. $P\equiv $ set of input ports, e.g. $P=\lbrace \text{up}, \text{down} \rbrace$.  
+
+$C_i:(\mathbb{R}_+ \to \lbrace \text{ absent, present } \rbrace )^P \to (\mathbb{R}_+ \to \lbrace \text{ absent } \rbrace \cup \mathbb{Z})$  
+
+For particular time $t$, 
+
+suppose actor has input ports $P=\lbrace p_1, \dots p_N \rbrace$, \\
+$\forall \, p \in P$, set $V_P \in \mathbf{Set}$ denotes values that maybe received on port $p$, when input is present $\equiv$ \textbf{type} of port $p$.  
+
+EY: At a reaction, 
+\[
+\begin{gathered}
+	y: P \to V_P \cup \lbrace \emptyset \rbrace \\ 
+	y: p \mapsto y(p) \text{ or } \emptyset 
+\end{gathered}
+\]
+
+Assume absent at times $t$ where reaction doesn't occur.  
+e.g. 
+$Q = \lbrace \text{ count } \rbrace$ 
+
+
+
+
+
 
 \part{Screws, Bolts, Fasteners (through Shigley's Mechanical Engineering Design)}
 
@@ -688,9 +852,30 @@ So given input torque $\tau$, efficiency for rotational motion to linear motion 
 \end{gathered}
 \end{equation}
 
+Other sources I looked at: 
+Vahid-Araghi and Golnaraghi (2010) \cite{VaGo2010} 
 
 
 
+\section{State Machine; Finite State Machine and (finite) graphs; graphs}
+
+cf. Stallings (1983) \cite{Stal1983}
+
+\subsection{Paths}
+
+cf. pp. 553, Section 2. Paths in Stallings (1983) \cite{Stal1983}; pp. 14, Subsection 2.1 Graphs in Serre (1980) \cite{Serr1980}
+\begin{definition}[path]
+path $p$ in $\Gamma$, of length $n=|p|$, with initial vertex $u$ and terminal vertex $v$, $n$-tuple of edges of $\Gamma$, $p=e_1 e_2 \dots e_n$, s.t. $\forall \, i = 1\dots n-1$, then $\tau(e_i) = i(e_{i+1})$ s.t. $u=i(e_1)$, $v=\tau(e_n)$  
+
+\end{definition}
+
+For $n=0$, given any vertex $v$, $\exists \, !$ unique path $\Lambda_v$, $| \Lambda_v| =0$, s.t. $u=v$, i.e. \\
+standard arc of length $n$, $\Lambda_n$, described as interval $[0,n]$ subdivided at integer points, path $p$ is map of graphs $p:A_n \to \Gamma$ s.t. $p(0)=u$, $p(n)=v$.  
+
+
+\part{Avionics; Embedded Systems; Embedded C}  
+
+\textbf{Introduction to Embedded Systems: Interfacing to the Freescale 9S12} from Valvano was meant to be an introduction (Valvano (2010) \cite{Valv2010}).  Valvano in there suggests \textbf{Embedded Microcomputer Systems} (Valvano (2011) \cite{Valv2011}) for an advanced treatment.  
 
 
 
@@ -721,6 +906,28 @@ Richard Budynas, Keith Nisbett.  \textbf{Shigley's Mechanical Engineering Design
 
 EY : 20170606 -  I was only able to obtain a copy of the 9th edition to use.  If you'd like to help us keep up to date with the 10th edition or to help the rLoop in general, please donate to the \href{rLoop}{www.rLoop.org}!
 
+\bibitem{VaGo2010}
+Orang Vahid-Araghi, Farid Golnaraghi.  \textbf{Friction-Induced Vibration in Lead-Screw Drives}.  Springer.  2010.  e-ISBN 978-1-4419-1752-2
+
+
+
+\bibitem{Stal1983}
+John R. Stallings.  "Topology of finite graphs."  \textbf{Invent. math. 71}, 551-565 (1983)  \textbf{Inventiones mathematicae}.  Springer-Verlag 1983.  
+
+\bibitem{Serr1980}  
+
+Trees (Springer Monographs in Mathematics) 1st ed. 1980. Corr. 2nd printing 2002 Edition
+by Jean-Pierre Serre (Author), J. Stilwell (Translator) 
+
+\bibitem{Valv2010}  
+Jonathan W. Valvano.  \textbf{Introduction to Embedded Systems: Interfacing to the Freescale 9S12}.  1st. Ed. 2010.  Cengage Learning.  USA.  
+
+\bibitem{Valv2011}
+Jonathan W. Valvano.  \textbf{Embedded Microcomputer Systems: Real Time Interfacing}.  3rd. Ed. 2011.  Cengage Learning.  USA.  
+
+\bibitem{LeSe2017}
+%Edward Ashford Lee and Sanjit Arunkumar Seshia.  \textbf{Introduction to Embedded Systems} \textbf{
+Edward A. Lee and Sanjit A. Seshia, \textbf{\href{http://leeseshia.org/index.html}{Introduction to Embedded Systems}}, A Cyber-Physical Systems Approach, Second Edition, MIT Press, ISBN 978-0-262-53381-2, 2017. 
 
 \end{thebibliography}
 
