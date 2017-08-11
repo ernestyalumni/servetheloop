@@ -624,7 +624,7 @@ cf. 3.1 Discrete Systems of Lee and Seshia (2017) \cite{LeSe2017}
 
 Let $T\subseteq \mathbb{R}$ s.t. 
 \[
-T:= \lbrace t\in \mathbb{R} | e(t) \neq \text{ abset } \equiv \emptyset 
+T:= \lbrace t\in \mathbb{R} | e(t) \neq \text{ absent } \equiv \emptyset 
 \]
 i.e. set of times when there's signal  
 
@@ -673,6 +673,251 @@ Assume absent at times $t$ where reaction doesn't occur.
 e.g. 
 $Q = \lbrace \text{ count } \rbrace$ 
 
+In summary, a \textbf{discrete signal} $x_i$, $\forall \, i = 1,2, \dots |P|$, $P\in \textbf{Sets}$, set of all input ports,  is
+\begin{equation}
+\boxed{ 
+\begin{gathered}\begin{aligned}
+& x_i: \mathbb{R} \to \lbrace \emptyset \rbrace \cup X_i \\ 
+& x_i:t \mapsto x_i(t) 
+\end{aligned} X\in \textbf{Sets} \text{ or } X = \mathbb{R}
+\end{gathered}
+}
+\end{equation}
+Let 
+\begin{equation}
+\boxed{ T_{x_i} = \lbrace t \in \mathbb{R} | x_i(t) \neq \emptyset \rbrace } 
+\end{equation}
+be the set of times when there's signal.  
+
+Let 
+\begin{equation}
+\boxed{ \begin{aligned}
+& p_i : \mathbb{R} \to \mathbb{Z}_2 = \lbrace \text{ present , abset } \rbrace \\ 
+& p_i: t\mapsto p_i(t)  
+\end{aligned} }
+\end{equation}
+$\forall \, i = 1,2, \dots |P | $ tell us if a signal is present or absent.   
+
+Similarly for the output $y_j$: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Finite-State Machines}
+
+cf. 3.3 Finite-State Machines of Lee and Seshia (2017) \cite{LeSe2017}
+
+\textbf{Finite-state} machine; assume states $\equiv S \in \textbf{FiniteSets}$.  
+
+\subsection{Transitions; edges, directed edges }
+
+cf. 3.3.1 Transitions of Lee and Seshia (2017) \cite{LeSe2017}
+
+\textbf{transition} - directed edge.  $\forall \, $ transition, label with "guard/action", i.e. label with a "guard" and an "action"
+
+\textbf{guard}- determines whether transition maybe taken on reaction \\
+\textbf{action} - specfies \emph{what outputs are produced on each reaction} \\
+
+guard is a \textbf{predicate} (boolean-valued) s.t. true when transition should be taken  \\
+e.g. example 3.4., FSM model for garage counter \\
+states $\equiv S = \lbrace 0 ,1, \dots M \rbrace$  
+
+
+\begin{tabular}{l l c}
+	$\begin{aligned}
+	\neg \\ 
+	\sim \\ 
+	! 
+	\end{aligned}$ & negation, not &  $\neg A$ true, iff $A$ false  \\ \hline
+	$\begin{aligned}
+	\wedge \\ \& \
+	\end{aligned}$ & logical conjunction, and & if $A$ and $B$ both true, $T$, $A \wedge B$ true.  Else, it's false.    \\ \hline 
+	$\begin{aligned}
+	& \vee \\ & + \\ & \parallel \end{aligned}$ & logical (inclusion) disjunction, or & if $A$ or $B$ (or both) true, $A \vee B$ false, if both false, $A\vee B$ false  
+	 \\ \hline  
+	$\begin{aligned}
+	& \oplus \\ 
+	& \veebar \end{aligned}$ & exclusive disjunction, xor & $A \oplus B$ true when either $A$ or $B$, but not both are true.    
+\end{tabular}
+
+\begin{tabular}{c c c c c c}
+\hline
+$A$ & $B$ & $\neg A$ & $ A\wedge B$ & $A \vee B$ & $A \oplus B$ \\ \hline
+T & T & F & T & T & F  \\
+T & F & F & F & T & T \\ 
+F & T & T & F & T & T \\ 
+F & F & T & F & F & F  
+\end{tabular}
+
+
+\textbf{action} (in reference to Lee, Seshia (2011) \cite{LeSe2017}), on a transition, action specifies resulting valuation on output ports when transition is taken.  
+
+"When assigning a value to an output port, we use notation name $:=$ value to distinguish assignment from a predicate, which would be written name $=$ value.  
+
+Let \\
+ports $P_{\text{in}} = \lbrace p_1^{(\text{in})}, \dots p_{N_{\text{in}}}^{(\text{in})}  \rbrace$ \\
+output ports $P_{\text{out}} = \lbrace p_1^{(\text{out})}, \dots p_{N_{\text{out}}}^{(\text{out})}  \rbrace$ \\
+
+At a reaction, 
+\begin{equation}
+\begin{gathered}
+\begin{aligned}
+& i: P_{\text{in}} \to V_{P_{\text{in}}} \cup \lbrace \emptyset \rbrace \\
+& i: p \mapsto i(p) 
+\end{aligned} \\
+\begin{aligned}
+& o: P_{\text{out}} \to V_{P_{\text{out}}} \cup \lbrace \emptyset \rbrace \\ 
+& o: p \mapsto o(p)	
+\end{aligned}
+\end{gathered}
+\end{equation}
+Given 
+\[
+i(p_1^{(\text{in})}, \dots p_{N_{\text{in}}}^{(\text{in}) } )  \in ( V_{P_{\text{in}}} \cup \lbrace \emptyset \rbrace )^{P_{\text{in}} } \times S
+\]
+where $S \equiv $ states of the system,  \\
+
+\textbf{guard}, $g_{\text{guard}}$, 
+\begin{equation}
+\begin{aligned}
+& g_{\text{guard}} : ( V_{P_{\text{in}}} \cup \lbrace \emptyset \rbrace )^{P_{\text{in}} } \times S \to \mathbb{Z}_2 = \lbrace \text{true}, \text{false} \rbrace \\ 
+& g_{\text{guard}}( p_1^{(\text{in})}, \dots p_{N_{\text{in}}}^{(\text{in})} ) \in \lbrace \text{true}, \text{false} \rbrace 
+\end{aligned}
+\end{equation}
+
+\textbf{action}  $a$, 
+\begin{equation}
+\begin{aligned}
+& a : g_{\text{guard}}, e \mapsto o( p_1^{(\text{out})}, \dots p_{N_{\text{out}}}^{(\text{out})} )
+\end{aligned}
+\end{equation}
+where  $e\in E$, $E \equiv $ set of all possible transitions.  
+
+cf. Sec. 3.3.3. Update Functions of Lee, Seshia (2011)  \cite{LeSe2017} 
+
+(States, Inputs, Outputs, update, initial State) $\equiv  (S,I, O, u,s_0)$,  
+
+where $u: S\times I \to S \times O$, and update $\equiv $ transition function (synonymous)
+
+Let sequence of reactions be indexed by $n \in \mathbb{N}$.  
+
+Then 
+\[
+\begin{aligned}
+& s:\mathbb{N} \to S \\ 
+& s(0) = s_0
+\end{aligned}
+\]
+$x:\mathbb{N} \to I$, $x\equiv $ input valuations \\
+$y:\mathbb{N} \to O$, $y\equiv $ output valuation.  
+
+state machine dynamics  
+\[
+(s(n+1),y(n)) = u(s(n),x(n))
+\]
+
+\[
+\begin{gathered}
+	\begin{aligned}
+	& i: P \to \bigcup_{i=1}^{ P^{(\text{in})}_{N_{\text{in}} }} V_{ P_i^{(\text{in}) } } \bigcup \lbrace \emptyset \rbrace \\ 
+	& i : p \mapsto i(p) \in V_P \cup \lbrace \emptyset \rbrace \equiv \text{ value of part $p$ } 
+\end{aligned} \\
+i\in I \subset \text{Hom}(\textbf{Set}, \textbf{Set})
+\end{gathered}
+\]
+
+
+
+\subsubsection{Graph $(V,E)$ viewpoint}
+
+Let $V=S \equiv $ states if $S\in \textbf{FiniteSet}$ (finite number of states), then for convenience, we can label, 1-to-1, $\forall \, s \in S$ with $\alpha = 0,1,\dots |S|$.  
+
+$\forall \, s_{\alpha} S$, \\
+$\exists \, \lbrace p_i^{(\alpha)} \rbrace_{i=1}^{ P^{(\alpha)} }$ input ports, $\lbrace ( x_i^{(\alpha)}, p_i^{(\alpha)} \rbrace | x_i^{(\alpha)} \in (\mathbb{R} \to X_i^{(\alpha)} ) , p_i^{(\alpha)} \in \lbrace \text{ present } , \emptyset \rbrace \rbrace_{i=1}^{ |P^{(\alpha)}| }$    \\
+$\exists \, \lbrace q_j^{(\alpha)} \rbrace_{j=1}^{ Q^{(\alpha)} }$ output ports, $\lbrace ( y_j^{(\alpha)}, q_j^{(\alpha)} \rbrace | y_j^{(\alpha)} \in Y_j^{(\alpha)}  , q_j^{(\alpha)} \in \lbrace \text{ present } , \emptyset \rbrace \rbrace_{j=1}^{ |Q^{(\alpha)}| }$  
+
+Consider $e\equiv (s_{\alpha},s_{\beta}) \in E$, $s_{\alpha}$ the initial vertex (state), $s_{\beta}$ terminal vertex (state).  
+
+$\forall \, (s_{\alpha}, s_{\beta})$, associate a guard $g: (x_1^{(\alpha)} \dots x_{P^{(\alpha)}}^{(\alpha)} ) \mapsto \lbrace T,F \rbrace$ and $y^{(\alpha)} = (y_1^{(\alpha)} \dots y_{Q^{(\alpha)}}^{(\alpha)}$
+
+If $\forall \, (x_1^{( \alpha)} \dots x_{P^{(\alpha)}}^{(\alpha)})$, $\exists \, $ at most 1 $(s_{\alpha}, s_{\beta} )$, system is deterministic.  
+
+
+\subsection{Nondeterministic Finite-State Machine (FSM); Formal Model}  
+
+cf. 3.5.1. Formal Model of Lee and Seshia (2017) \cite{LeSe2017} 
+
+\textbf{nondeterministic FSM}  
+\begin{equation}
+	(\text{States, Inputs, Outputs, possibleUpdates, initialStates}) \equiv (S,I,O,u,I_0)  \equiv (S,X,Y,u,I_0)
+\end{equation}
+with update relation (or \textbf{transition relation}) $u$
+\[
+u:S\times I \to 2^{S\times O} 
+\]
+where powerset of $S\times O$, $2^{S\times O}$, is the set of possible (next state, output valuation) pairs, \\
+$I_0 = $ set of initial states.  
+
+
+
+
+
+Let $\Sigma = \lbrace \text{ apart, together } \rbrace = \lbrace \text{ apa, tog } \rbrace$  
+
+\[
+I_0 \ni \lbrace \begin{gathered} 
+x_1(0) := x_{1,0} \\ 
+x_2(0) := x_{2,0} \\
+\dot{x}_1(0) = \dot{x}_2(0) = 0 \end{gathered}
+\]
+\[
+(\text{apa},\text{tog}) , g= \text{ if } x_1(t) = x_2(t)
+\]
+action $\equiv$ set action, use momentum conservation: $m_1 \dot{x}_1 + m_2 \dot{x}_2 = (m_1+m_2) \dot{x} $ or 
+\[
+\dot{x}(t) = \frac{m_1 \dot{x}_1(t) + m_2\dot{x}_2(t) }{ m_1 + m_2 } 
+\]
+
+Let $s \equiv F_{\text{stick}} \in \mathbb{R}_+$, represent the stickiness of the 2 masses.  
+\[
+F_2-F_1 = -k_2 (x(t) - p_2) + k_1(x(t) - p_1) > F_{\text{stick}} \text{ or } -(k_2- k_1) x(t) + k_2 p_2 - k_1 p_1 > F_{\text{stick}}
+\]
+
+
+Example 4.7 of Lee and Seshia (2017) \cite{LeSe2017}
+
+Consider a bouncing ball.  
+
+Inelastic collision with ground.  
+
+\[
+\Sigma = \lbrace \text{ free } \rbrace
+\] 
+$(\text{free},\text{free}) $ if $y(t) = 0 $, $\dot{y}(t) = -a\dot{y}(t)$, constant $a$, $0<a<1$. 
+
+Cont. state varialbes of free mode (free state)
+\[
+\begin{gathered}
+	s(t) \equiv X(t)  = \left[ \begin{matrix} y(t) \\ 
+\dot{y}(t) \end{matrix} \right] \text{ so } \dot{X}(t) = \left[ \begin{matrix} \dot{y}(t) \\ \ddot{y}(t) \end{matrix} \right] = \left[ \begin{matrix} \dot{y}(t) \\ -g \end{matrix} \right] = \left[ \begin{matrix} 0 & 1 \\ 0 & 0 \end{matrix} \right] X + \left[ \begin{matrix} 0 \\ -g \end{matrix} \right] 
+\end{gathered}
+\]
+\[
+\begin{aligned}
+	& \ddot{y}(t) = -g \\ 
+	& \dot{y}(t) = -gt \\ 
+	& y(t) = \frac{-1}{2} gt^2 + h_0  
+\end{aligned}
+\]
 
 
 
