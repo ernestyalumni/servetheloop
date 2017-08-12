@@ -1,0 +1,1063 @@
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power A Current Temps'
+  !!python/unicode 'Node': !!python/unicode 'Power Node A'
+  !!python/unicode 'PacketType': 12801
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power A Temps '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Count', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode 'Temperature', !!python/unicode 'beginLoop': true,
+    !!python/unicode 'endLoop': true, !!python/unicode 'size': 4, !!python/unicode 'type': !!python/unicode 'float32',
+    !!python/unicode 'units': !!python/unicode 'C'}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power B Current Temps'
+  !!python/unicode 'Node': !!python/unicode 'Power Node B'
+  !!python/unicode 'PacketType': 12801
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power B Temps '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Count', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode 'Temperature', !!python/unicode 'beginLoop': true,
+    !!python/unicode 'endLoop': true, !!python/unicode 'size': 4, !!python/unicode 'type': !!python/unicode 'float32',
+    !!python/unicode 'units': !!python/unicode 'C'}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power A Current Temps Locations'
+  !!python/unicode 'Node': !!python/unicode 'Power Node A'
+  !!python/unicode 'PacketType': 12803
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power A Temps Loc '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Number of Temps', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode 'User Index', !!python/unicode 'beginLoop': true,
+    !!python/unicode 'size': 2, !!python/unicode 'type': !!python/unicode 'uint16',
+    !!python/unicode 'units': !!python/unicode 'Hex'}
+  - {!!python/unicode 'Name': !!python/unicode 'Resolution', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode 'bits'}
+  - {!!python/unicode 'Name': !!python/unicode 'Bus Index', !!python/unicode 'endLoop': true,
+    !!python/unicode 'size': 1, !!python/unicode 'type': !!python/unicode 'uint8',
+    !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power B Current Temps Locations'
+  !!python/unicode 'Node': !!python/unicode 'Power Node B'
+  !!python/unicode 'PacketType': 12803
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power B Temps Loc '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Number of Temps', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode 'User Index', !!python/unicode 'beginLoop': true,
+    !!python/unicode 'size': 2, !!python/unicode 'type': !!python/unicode 'uint16',
+    !!python/unicode 'units': !!python/unicode 'Hex'}
+  - {!!python/unicode 'Name': !!python/unicode 'Resolution', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode 'bits'}
+  - {!!python/unicode 'Name': !!python/unicode 'Bus Index', !!python/unicode 'endLoop': true,
+    !!python/unicode 'size': 1, !!python/unicode 'type': !!python/unicode 'uint8',
+    !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power A ROM ID'
+  !!python/unicode 'Node': !!python/unicode 'Power Node A'
+  !!python/unicode 'PacketType': 12805
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power A ROM '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Index', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hi', !!python/unicode 'size': 4, !!python/unicode 'type': !!python/unicode 'uint32',
+    !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Lo', !!python/unicode 'size': 4, !!python/unicode 'type': !!python/unicode 'uint32',
+    !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power B ROM ID'
+  !!python/unicode 'Node': !!python/unicode 'Power Node B'
+  !!python/unicode 'PacketType': 12805
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power B ROM '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Index', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hi', !!python/unicode 'size': 4, !!python/unicode 'type': !!python/unicode 'uint32',
+    !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Lo', !!python/unicode 'size': 4, !!python/unicode 'type': !!python/unicode 'uint32',
+    !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Auto-sequence test'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 6401
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Auto-test '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'State', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Status', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power A BMS'
+  !!python/unicode 'Node': !!python/unicode 'Power Node A'
+  !!python/unicode 'PacketType': 13313
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power A BMS '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Faults', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Temp State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Charger State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Num Temp Sensors', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Highest Sensor Value', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Average Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Highest Sensor Index', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Pack Volts', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Highest Cell Volts', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Lowest Cell Volts', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Board Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Node Pressure', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Node Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '1 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '2 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '3 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '4 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '5 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '6 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '7 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '8 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '9 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '10 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '11 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '12 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '13 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '14 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '15 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '16 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '17 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '18 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '1 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '2 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '3 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '4 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '5 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '6 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '7 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '8 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '9 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '10 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '11 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '12 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '13 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '14 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '15 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '16 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Voltage Updates', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode 'updates'}
+  - {!!python/unicode 'Name': !!python/unicode 'Temp Scan Count', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode 'scans'}
+  - {!!python/unicode 'Name': !!python/unicode 'Pack Current', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'A'}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power B BMS'
+  !!python/unicode 'Node': !!python/unicode 'Power Node B'
+  !!python/unicode 'PacketType': 13313
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power B BMS '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Faults', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Temp State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Charger State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Num Temp Sensors', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Highest Sensor Value', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Average Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Highest Sensor Index', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Pack Volts', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Highest Cell Volts', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Lowest Cell Volts', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Board Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Node Pressure', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Node Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '1 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '2 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '3 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '4 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '5 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '6 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '7 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '8 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '9 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '10 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '11 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '12 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '13 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '14 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '15 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '16 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '17 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '18 Module Voltage', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'V'}
+  - {!!python/unicode 'Name': !!python/unicode '1 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '2 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '3 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '4 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '5 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '6 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '7 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '8 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '9 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '10 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '11 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '12 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '13 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '14 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '15 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '16 BMS ID', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Voltage Updates', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode 'updates'}
+  - {!!python/unicode 'Name': !!python/unicode 'Temp Scan Count', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode 'scans'}
+  - {!!python/unicode 'Name': !!python/unicode 'Pack Current', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'A'}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Power A Cooling'
+  !!python/unicode 'Node': !!python/unicode 'Power Node A'
+  !!python/unicode 'PacketType': 13825
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Power A Cooling '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover1/2 Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'degF'}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover1/2 Cooling State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover1/2 Solenoid State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover1/2 Solenoid Pin', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover3/4 Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'degF'}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover3/4 Cooling State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover3/4 Solenoid State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover3/4 Solenoid Pin', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover5/6 Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'degF'}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover5/6 Cooling State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover5/6 Solenoid State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover5/6 Solenoid Pin', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover7/8 Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'degF'}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover7/8 Cooling State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover7/8 Solenoid State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Hover7/8 Solenoid Pin', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'EddyBrake Temp', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'degF'}
+  - {!!python/unicode 'Name': !!python/unicode 'EddyBrake Cooling State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'EddyBrake Solenoid State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'EddyBrake Solenoid Pin', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Accel Cal Full'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 4097
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Accel '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode '0 Flags', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '0 X Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Y Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Z Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Flags', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '1 X Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Y Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Z Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Accel Data Full'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 4099
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Accel '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode '0 Flags', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '0 X Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Y Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Z Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '0 X Gs', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'Gs'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Y Gs', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'Gs'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Z Gs', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'Gs'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Pitch', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': "\xB0"}
+  - {!!python/unicode 'Name': !!python/unicode '0 Roll', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': "\xB0"}
+  - {!!python/unicode 'Name': !!python/unicode '0 Current Accel', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mmss'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Current Velocity', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mms'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Previous Velocity', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mms'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Current Displacement', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode '0 Previous Displacement', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Flags', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode '1 X Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Y Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Z Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'RAW'}
+  - {!!python/unicode 'Name': !!python/unicode '1 X Gs', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'Gs'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Y Gs', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'Gs'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Z Gs', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'Gs'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Pitch', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': "\xB0"}
+  - {!!python/unicode 'Name': !!python/unicode '1 Roll', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': "\xB0"}
+  - {!!python/unicode 'Name': !!python/unicode '1 Current Accel', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mmss'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Current Velocity', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mms'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Previous Velocity', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mms'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Current Displacement', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode '1 Previous Displacement', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mm'}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Brake Cal Full'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 0
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Brake '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Parking', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Left Screw Pos', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Right Screw Pos', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Left Extend Limit', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Right Extend Limit', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Left Retract Limit', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Right Retract Limit', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'FL I-Beam Dist', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'RL I-Beam Dist', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'FR I-Beam Dist', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'RR I-Beam Dist', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Left MLP Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Right MLP Raw', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Left MLP Scaled', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Right MLP Scaled', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'int16', !!python/unicode 'units': !!python/unicode 'mm'}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Brake data'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 5122
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Brake '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode 'A'}
+  - {!!python/unicode 'Name': !!python/unicode 'I Beam mm 1 Target', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Lead screw mm 1 Target', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Lead screw um 1 Target', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode 'um'}
+  - {!!python/unicode 'Name': !!python/unicode 'I Beam mm 1 Current', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Lead Screw mm 1 Current', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'MLP 1 Current', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Limit Extend 1', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Limit Retract 1', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Limit Extend Edge 1', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Limit Retract Edge 1', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'SW Error 1', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ADC Sample 1', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ADC Zero 1', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ADC Minus Zero 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'System Span 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Position mm 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Linear Velocity 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Linear Acceleration 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current Position 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode 'A'}
+  - {!!python/unicode 'Name': !!python/unicode 'I Beam mm 2 Target', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Lead screw mm 2 Target', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Lead screw um 2 Target', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode 'um'}
+  - {!!python/unicode 'Name': !!python/unicode 'I Beam mm 2 Current', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Lead Screw mm 2 Current', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'MLP 2 Current', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Limit Extend 2', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Limit Retract 2', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Limit Extend Edge 2', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Limit Retract Edge 2', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'SW Error 2', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ADC Sample 2', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ADC Zero 2', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ADC Minus Zero 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'System Span 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Position mm 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Linear Velocity 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Linear Acceleration 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current Position 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Calibration State', !!python/unicode 'size': 1,
+    !!python/unicode 'type': !!python/unicode 'uint8', !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Throttle parameters'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 5379
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Throttle '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Requested RPM 1', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Requested RPM 2', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Requested RPM 3', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Requested RPM 4', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Requested RPM 5', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Requested RPM 6', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Requested RPM 7', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Requested RPM 8', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current RPM 1', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current RPM 2', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current RPM 3', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current RPM 4', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current RPM 5', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current RPM 6', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current RPM 7', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Current RPM 8', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ASI RPM 1', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ASI RPM 2', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ASI RPM 3', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ASI RPM 4', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ASI RPM 5', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ASI RPM 6', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ASI RPM 7', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'ASI RPM 8', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Motor parameters'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 5126
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'Motor '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Microstep Resolution 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Max Acceleration 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Microns per Revolution 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Steps per Revolution 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Max Angular Velocity 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Microstep Resolution 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Max Acceleration 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Microns per Revolution 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Steps per Revolution 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Max Angular Velocity 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Lowest Cell Volts', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Laser Opto Sensor'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 4353
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'LaserOpto '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser error packet count 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'First byte wrong 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Raw distance 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser error packet count 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'First byte wrong 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Raw distance 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 3', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser error packet count 3', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'First byte wrong 3', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Raw distance 3', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value 3', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 3', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 4', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser error packet count 4', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'First byte wrong 4', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Raw distance 4', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value 4', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 4', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 5', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser error packet count 5', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'First byte wrong 5', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Raw distance 5', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value 5', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 5', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 6', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser error packet count 6', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'First byte wrong 6', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Raw distance 6', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value 6', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 6', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 7', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser error packet count 7', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'First byte wrong 7', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Raw distance 7', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value 7', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 7', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags 8', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser error packet count 8', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'First byte wrong 8', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Raw distance 8', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value 8', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'float32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 8', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Forward Laser Distance Sensor'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 4609
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'ForwardLaser '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'Fault flags', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 0', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'RAW value', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Filtered value', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode 'mm'}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 3', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'int32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Binary Distance', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Missed Start', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Bad Distance', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Error Code', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+- !!python/unicode 'DAQ': false
+  !!python/unicode 'Name': !!python/unicode 'Flight Control - Laser Contrast 0'
+  !!python/unicode 'Node': !!python/unicode 'Flight Control'
+  !!python/unicode 'PacketType': 4865
+  !!python/unicode 'ParameterPrefix': !!python/unicode 'LaserContrast0 '
+  !!python/unicode 'Parameters':
+  - {!!python/unicode 'Name': !!python/unicode 'System Fault Flags', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 0', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 1', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 2', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Spare 3', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Laser Fault Flags', !!python/unicode 'size': 4,
+    !!python/unicode 'type': !!python/unicode 'uint32', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Rising Count', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Falling Count', !!python/unicode 'size': 2,
+    !!python/unicode 'type': !!python/unicode 'uint16', !!python/unicode 'units': !!python/unicode ''}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_00', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_01', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_02', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_03', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_04', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_05', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_06', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_07', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_08', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_09', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_10', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_11', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_12', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_13', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_14', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_15', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_16', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_17', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_18', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_19', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_20', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_21', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_22', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_23', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_24', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_25', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_26', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_27', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_28', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_29', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_30', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_31', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_32', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_33', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_34', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_35', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_36', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_37', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_38', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_39', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_40', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_41', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_42', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_43', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_44', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_45', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_46', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_47', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_48', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_49', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_50', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_51', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_52', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Rise_53', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_00', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_01', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_02', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_03', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_04', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_05', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_06', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_07', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_08', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_09', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_10', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_11', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_12', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_13', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_14', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_15', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_16', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_17', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_18', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_19', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_20', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_21', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_22', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_23', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_24', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_25', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_26', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_27', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_28', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_29', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_30', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_31', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_32', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_33', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_34', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_35', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_36', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_37', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_38', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_39', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_40', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_41', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_42', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_43', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_44', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_45', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_46', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_47', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_48', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_49', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_50', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_51', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_52', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+  - {!!python/unicode 'Name': !!python/unicode 'Fall_53', !!python/unicode 'size': 8,
+    !!python/unicode 'type': !!python/unicode 'uint64', !!python/unicode 'units': !!python/unicode 'ns'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    CPU LOAD', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16384,
+  !!python/unicode 'dataSize': 1, !!python/unicode 'dataType': !!python/unicode 'uint8'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 0 X', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16385,
+  !!python/unicode 'dataSize': 2, !!python/unicode 'dataType': !!python/unicode 'int16'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 0 Y', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16386,
+  !!python/unicode 'dataSize': 2, !!python/unicode 'dataType': !!python/unicode 'int16'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 0 Z', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16387,
+  !!python/unicode 'dataSize': 2, !!python/unicode 'dataType': !!python/unicode 'int16'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 1 X', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16388,
+  !!python/unicode 'dataSize': 2, !!python/unicode 'dataType': !!python/unicode 'int16'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 1 Y', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16389,
+  !!python/unicode 'dataSize': 2, !!python/unicode 'dataType': !!python/unicode 'int16'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 1 Z', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16390,
+  !!python/unicode 'dataSize': 2, !!python/unicode 'dataType': !!python/unicode 'int16'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 0 ACCEL', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16391,
+  !!python/unicode 'dataSize': 4, !!python/unicode 'dataType': !!python/unicode 'int32'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 0 VELOCITY', !!python/unicode 'Node': !!python/unicode 'Flight Control',
+  !!python/unicode 'PacketType': 16392, !!python/unicode 'dataSize': 4, !!python/unicode 'dataType': !!python/unicode 'int32'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 0 DISPLACEMENT', !!python/unicode 'Node': !!python/unicode 'Flight Control',
+  !!python/unicode 'PacketType': 16393, !!python/unicode 'dataSize': 4, !!python/unicode 'dataType': !!python/unicode 'int32'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 1 ACCEL', !!python/unicode 'Node': !!python/unicode 'Flight Control', !!python/unicode 'PacketType': 16394,
+  !!python/unicode 'dataSize': 4, !!python/unicode 'dataType': !!python/unicode 'int32'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 1 VELOCITY', !!python/unicode 'Node': !!python/unicode 'Flight Control',
+  !!python/unicode 'PacketType': 16396, !!python/unicode 'dataSize': 4, !!python/unicode 'dataType': !!python/unicode 'int32'}
+- {!!python/unicode 'DAQ': true, !!python/unicode 'Name': !!python/unicode 'FCU DAQ
+    ACCEL 1 DISPLACEMENT', !!python/unicode 'Node': !!python/unicode 'Flight Control',
+  !!python/unicode 'PacketType': 16397, !!python/unicode 'dataSize': 4, !!python/unicode 'dataType': !!python/unicode 'int32'}
